@@ -1,0 +1,47 @@
+{
+	"app-id": "org.eclipse.Eclipse",
+	"runtime": "org.gnome.Platform",
+	"branch": "3.22",
+	"sdk": "org.gnome.Sdk",
+	"command": "eclipse",
+	"finish-args": [
+		"--socket=x11",
+		"--share=ipc",
+		"--share=network",
+		"--device=all",
+		"--filesystem=~/workspace;~/.m2;~/.eclipse;/etc/hosts:ro;"
+	],
+	"modules": [
+		{
+      			"name": "eclipse",
+      			"no-autogen": true,
+			"sources": [
+				{
+					"type": "file",
+					"url": "http://mirror.ibcp.fr/pub/eclipse//technology/epp/downloads/release/neon/1a/eclipse-cpp-neon-1a-linux-gtk-x86_64.tar.gz",
+					"sha256": "7b7e720035cd5269882cc6be4ea9c7cde6190a574a5e3d6faee86e03a0752217"
+				},
+				{
+					"type": "file",
+					"url": "http://javadl.oracle.com/webapps/download/AutoDL?BundleId=207765",
+					"sha256": "66d8971b240bbd03d114308958fff0fb8068d0589122885d9591727e5472137f"
+				},
+        			{
+          				"type": "file",
+          				"path": "Makefile",
+          				"dest-filename": "Makefile"
+        			},
+        			{
+          				"type": "file",
+          				"path": "org.eclipse.Eclipse.png",
+          				"dest-filename": "org.eclipse.Eclipse.png"
+        			},
+        			{
+          				"type": "file",
+          				"path": "org.eclipse.Eclipse.desktop",
+          				"dest-filename": "org.eclipse.Eclipse.desktop"
+ 			       }
+      			]
+    		}
+  	]
+	}
